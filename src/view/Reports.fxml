@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" style="-fx-background-color: #EEEEEE;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ReportsController">
+    <children>
+        <BorderPane layoutX="20.0" layoutY="20.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <top>
+                <VBox spacing="5.0" BorderPane.alignment="CENTER" />
+            </top>
+         <left>
+            <VBox spacing="2.0" styleClass="sidebar" BorderPane.alignment="CENTER">
+               <children>
+                  <TitledPane animated="false" style="-fx-background-color: transparent;" text="Sales" VBox.vgrow="ALWAYS">
+                    <content>
+                        <VBox alignment="CENTER_RIGHT" styleClass="sidebar">
+                           <children>
+                              <HBox VBox.vgrow="ALWAYS">
+                                 <children>
+                                    <Button alignment="CENTER_RIGHT" mnemonicParsing="false" onAction="#lblSwitchSalesReport" prefWidth="200.0" styleClass="btns" text="Sales">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                              <Separator VBox.vgrow="ALWAYS" />
+                              <HBox alignment="CENTER_RIGHT" VBox.vgrow="ALWAYS">
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                                 <children>
+                                    <Button alignment="CENTER_RIGHT" mnemonicParsing="false" onAction="#lblSwitchBestOrWorst" prefWidth="200.0" styleClass="btns" text="Best / Worst Sellers">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                              <Separator VBox.vgrow="ALWAYS" />
+                              <HBox alignment="CENTER_RIGHT">
+                                 <children>
+                                    <Button alignment="CENTER_RIGHT" mnemonicParsing="false" onAction="#lblSwitchSalesReport" prefWidth="200.0" styleClass="btns" text="Compare Dates">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                           </children>
+                           <padding>
+                              <Insets right="-10.0" />
+                           </padding>
+                        </VBox>
+                    </content>
+                  </TitledPane>
+                  <TitledPane animated="false" style="-fx-background-color: transparent;" text="Inventory">
+                     <content>
+                        <AnchorPane style="-fx-background-color: white;">
+                           <children>
+                              <VBox alignment="CENTER_RIGHT" styleClass="sidebar" AnchorPane.leftAnchor="-10.0" AnchorPane.rightAnchor="-10.0">
+                                 <children>
+                                    <HBox alignment="CENTER_RIGHT">
+                                       <children>
+                                          <Button alignment="CENTER_RIGHT" mnemonicParsing="false" onAction="#btnSwitchInventoryReport" prefWidth="200.0" styleClass="btns" text="Inventory Reports">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font></Button>
+                                       </children>
+                                    </HBox>
+                                    <Separator />
+                                    <HBox alignment="CENTER_RIGHT">
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                       <children>
+                                          <Button alignment="CENTER_RIGHT" mnemonicParsing="false" onAction="#btnSwitchInventoryValueReport" prefWidth="200.0" styleClass="btns" text="Inventory Value">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font></Button>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </TitledPane>
+               </children>
+               <padding>
+                  <Insets top="10.0" />
+               </padding>
+            </VBox>
+         </left>
+         <center>
+            <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <center>
+                  <StackPane fx:id="holderPaneTwo" prefHeight="150.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" />
+                     </children>
+                  </StackPane>
+               </center>
+            </BorderPane>
+         </center>
+        </BorderPane>
+    </children>
+    <stylesheets>
+        <URL value="@../css/Dashboard.css" />
+        <URL value="@../css/custom.css" />
+      <URL value="@../css/miniSideBar.css" />
+    </stylesheets>
+</AnchorPane>

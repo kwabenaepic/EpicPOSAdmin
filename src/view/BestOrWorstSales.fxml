@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="1064.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.BestOrWorstSalesController">
+    <children>
+        <BorderPane prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="0.0">
+            <top>
+                <VBox spacing="5.0">
+                    <children>
+                        <Label style="-fx-font-size: 20; -fx-font-weight: bold;" text="Best/Worst Selling Items" />
+                        <Separator prefHeight="4.0" prefWidth="1213.0" />
+                  <HBox spacing="10.0">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" spacing="10.0">
+                           <children>
+                              <Label text="Export To:" />
+                              <Button fx:id="btnExportPdf" mnemonicParsing="false" onAction="#btnExportPdfOnAction" prefWidth="102.0" style="-fx-content-display: left;" styleClass="btnTender" text="PDF">
+                                 <graphic>
+                                    <FontAwesomeIconView size="18" />
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="btnExportExcel" mnemonicParsing="false" onAction="#btnExportExcelOnAction" prefWidth="102.0" style="-fx-content-display: left;" styleClass="btnTender" text="Excel">
+                                 <graphic>
+                                    <FontAwesomeIconView size="18" />
+                                 </graphic>
+                              </Button>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_RIGHT" spacing="5.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <HBox alignment="CENTER_RIGHT" spacing="10.0">
+                                 <children>
+                                    <Label text="From:" />
+                                    <DatePicker fx:id="dpDateFrom1" prefWidth="110.0" styleClass="btnTender" />
+                                    <Label text="To:" />
+                                    <DatePicker fx:id="dpDateTo1" prefWidth="110.0" styleClass="btnTender" />
+                                    <Button fx:id="btnShowRange1" mnemonicParsing="false" onAction="#btnShowRnangeOnAction" styleClass="btnTender" text="Show Range" />
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets right="20.0" />
+                                 </HBox.margin>
+                              </HBox>
+                              <ComboBox fx:id="cbDateRange1" onAction="#cbDateRangeOnAction" prefWidth="150.0" promptText="Today" styleClass="btnTender" />
+                              <TextField fx:id="tfSearch1" onKeyReleased="#tfSearchOnKeyReleased" prefHeight="33.0" promptText="Search Sales .." />
+                              <Button fx:id="btnRefresh1" mnemonicParsing="false" onAction="#btnRefreshOnAction" prefHeight="31.0" prefWidth="31.0" />
+                           </children>
+                        </HBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="5.0" right="5.0" />
+                     </VBox.margin>
+                  </HBox>
+                    </children>
+                    <padding>
+                        <Insets top="10.0" />
+                    </padding>
+                </VBox>
+            </top>
+            <center>
+                <TableView fx:id="tblInventory" tableMenuButtonVisible="true" BorderPane.alignment="CENTER">
+                    <columns>
+                        <TableColumn fx:id="tblClmItemId" prefWidth="127.0" text="Item #" />
+                        <TableColumn fx:id="tblClmItemName" prefWidth="145.0" text="Item Name" />
+                        <TableColumn fx:id="tblClmDescription" prefWidth="145.0" text="Item Description" />
+                        <TableColumn fx:id="tblClmQuantity" prefWidth="145.0" text="Qty Sold" />
+                        <TableColumn fx:id="tblClmUnitPrice" prefWidth="127.0" text="Total" />
+                    </columns>
+                </TableView>
+            </center>
+        </BorderPane>
+    </children>
+    <stylesheets>
+        <URL value="@../css/Modena.css" />
+    </stylesheets>
+</AnchorPane>

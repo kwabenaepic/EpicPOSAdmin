@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane fx:id="rootPane" prefHeight="400.0" prefWidth="600.0" style="-fx-border-color: gray;" styleClass="..\css\Login.css" stylesheets="@../css/Login.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SplashFXMLController">
+   <children>
+      <VBox prefHeight="300.0" prefWidth="100.0" styleClass="backgroun" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <BorderPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <bottom>
+            <ProgressBar fx:id="pBprogressBar" prefHeight="10.0" prefWidth="600.0" progress="0.0" BorderPane.alignment="CENTER" />
+         </bottom>
+         <right>
+            <VBox prefHeight="382.0" prefWidth="332.0" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="127.0" prefWidth="229.0">
+                     <children>
+                        <ImageView fitHeight="96.0" fitWidth="160.0" pickOnBounds="true">
+                           <image>
+                              <Image url="@../images/splash.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="98.0" fitWidth="264.0" pickOnBounds="true">
+                           <image>
+                              <Image url="@../images/epic.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="40.0" />
+                     </VBox.margin>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                  </VBox>
+               </children>
+            </VBox>
+         </right>
+         <left>
+            <VBox alignment="BOTTOM_LEFT" BorderPane.alignment="CENTER">
+               <children>
+                  <Label prefHeight="16.0" prefWidth="170.0" style="-fx-text-fill: black;" text="Loading Resources ..." />
+               </children>
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </VBox>
+         </left>
+      </BorderPane>
+   </children>
+</AnchorPane>

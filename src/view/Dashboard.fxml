@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="acMain" onKeyPressed="#acMain" onMouseMoved="#acMainOnMouseMove" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DashboardController">
+    <children>
+        <StackPane layoutY="-9.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <BorderPane prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <left>
+                        <AnchorPane fx:id="acDashBord">
+                            <children>
+                                <VBox layoutY="70.0" prefWidth="80.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <children>
+                                        <Button fx:id="btnHome" contentDisplay="TOP" mnemonicParsing="false" onAction="#btnSwitchHome" prefWidth="100.0" styleClass="buttonMenu" text="Home">
+                                 <graphic>
+                                    <FontAwesomeIconView fill="WHITE" glyphName="HOME" size="30" />
+                                 </graphic>
+                                        </Button>
+                                        <Button fx:id="btnSales" contentDisplay="TOP" mnemonicParsing="false" onAction="#btnSwitchSales" prefWidth="150.0" styleClass="buttonMenu" text="Sales">
+                                            <graphic>
+                                                <ImageView fx:id="imgSellBtn" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@../images/sell2.png" />
+                                                    </image>
+                                                </ImageView>
+                                            </graphic>
+                                        </Button>
+                                        <Button fx:id="btnInventory" contentDisplay="TOP" mnemonicParsing="false" onAction="#btnSwitchInventory" prefWidth="150.0" styleClass="buttonMenu" text="Inventory">
+                                            <graphic>
+                                                <ImageView fx:id="imgSettingsBtn" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@../images/inventory.png" />
+                                                    </image>
+                                                </ImageView>
+                                            </graphic>
+                                        </Button>
+                                        <Button fx:id="btnCustomers" contentDisplay="TOP" mnemonicParsing="false" onAction="#btnSwitchCustomers" prefWidth="150.0" styleClass="buttonMenu" text="Customers">
+                                 <graphic>
+                                    <FontAwesomeIconView fill="WHITE" glyphName="USER" size="30" />
+                                 </graphic>
+                                        </Button>
+                                        <Button fx:id="btnEmployees" contentDisplay="TOP" mnemonicParsing="false" onAction="#btnSwitchEmployees" prefWidth="150.0" styleClass="buttonMenu" text="Employees">
+                                 <graphic>
+                                    <FontAwesomeIconView fill="WHITE" glyphName="USERS" size="30" />
+                                 </graphic>
+                                        </Button>
+                                        <Button fx:id="btnMeterReconciliation" contentDisplay="TOP" mnemonicParsing="false" onAction="#btnSwitchMeterReconciliation" prefWidth="150.0" styleClass="buttonMenu" text="Settings">
+                                            <graphic>
+                                                <ImageView fx:id="imgAboutBtn1" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@../images/settings.png" />
+                                                    </image>
+                                                </ImageView>
+                                            </graphic>
+                                        </Button>
+                                        <Button fx:id="btnReports" contentDisplay="TOP" mnemonicParsing="false" onAction="#btnSwitchReports" prefWidth="150.0" styleClass="buttonMenu" text="Reports">
+                                            <graphic>
+                                                <ImageView fx:id="imgStoreBtn" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@../images/reports.png" />
+                                                    </image>
+                                                </ImageView>
+                                            </graphic>
+                                        </Button>
+                                        <Button fx:id="btnSettings" contentDisplay="TOP" mnemonicParsing="false" onAction="#btnSettingsOnClick" prefWidth="150.0" styleClass="buttonMenu" text="Settings">
+                                 <graphic>
+                                    <FontAwesomeIconView fill="WHITE" glyphName="COGS" size="30" />
+                                 </graphic>
+                                        </Button>
+                                        <Button fx:id="btnAbout111" contentDisplay="TOP" mnemonicParsing="false" onAction="#btnAboutOnClick" prefWidth="150.0" styleClass="buttonMenu" text="About">
+                                            <graphic>
+                                                <ImageView fx:id="imgAboutBtn111" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@../images/about.png" />
+                                                    </image>
+                                                </ImageView>
+                                            </graphic>
+                                        </Button>
+                                    </children>
+                                </VBox>
+                            </children>
+                     <BorderPane.margin>
+                        <Insets right="4.0" />
+                     </BorderPane.margin>
+                        </AnchorPane>
+                    </left>
+                    <center>
+                        <BorderPane fx:id="appContent" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                            <center>
+                                <StackPane fx:id="holderPane" prefHeight="150.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                    <children>
+                                        <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: transparent;" />
+                                    </children>
+                                </StackPane>
+                            </center>
+                        </BorderPane>
+                    </center>
+                    <top>
+                        <AnchorPane fx:id="acHead">
+                            <children>
+                                <HBox AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                                    <children>
+                                        <HBox alignment="CENTER_LEFT">
+                                            <children>
+                                    <HBox style="-fx-background-color: transparent;">
+                                       <children>
+                                          <HBox alignment="CENTER" prefWidth="80.0">
+                                             <children>
+                                                <ImageView fitHeight="40.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../images/splash.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </children>
+                                             <HBox.margin>
+                                                <Insets top="5.0" />
+                                             </HBox.margin>
+                                          </HBox>
+                                       </children>
+                                    </HBox>
+                                                <Label fx:id="lblUserId" prefHeight="17.0" prefWidth="58.0" styleClass="labelColor" text="COLOR" visible="false" />
+                                            </children>
+                                        </HBox>
+                                        <Region HBox.hgrow="ALWAYS" />
+                              <HBox alignment="CENTER" spacing="30.0" styleClass="labelColor">
+                                 <children>
+                                    <HBox alignment="CENTER" spacing="3.0">
+                                       <children>
+                                          <Label fx:id="lblHour" alignment="CENTER" styleClass="labelColor" text="0" textFill="WHITE">
+                                             <font>
+                                                <Font size="25.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="dateLocal1" styleClass="labelColor" text=":" textFill="WHITE">
+                                             <font>
+                                                <Font size="25.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="lblMinutes" alignment="CENTER" styleClass="labelColor" text="00" textFill="WHITE">
+                                             <font>
+                                                <Font size="25.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="dateLocal11" styleClass="labelColor" text=":" textFill="WHITE">
+                                             <font>
+                                                <Font size="25.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="lblSeconds" alignment="CENTER" styleClass="labelColor" text="00" textFill="WHITE">
+                                             <font>
+                                                <Font size="25.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <Label fx:id="dateLocal" styleClass="labelColor" text="08 Feb 2018" textFill="WHITE">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets right="50.0" />
+                                 </HBox.margin>
+                              </HBox>
+                              <Region />
+                                        <HBox alignment="CENTER_RIGHT">
+                                            <children>
+                                    <Button fx:id="btnLogout" mnemonicParsing="false" onAction="#btnLogoutOnAction" style="-fx-background-color: transparent;" styleClass="ivUserImage">
+                                       <graphic>
+                                          <ImageView fitHeight="27.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../images/lock.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                            </children>
+                                 <padding>
+                                    <Insets right="15.0" />
+                                 </padding>
+                                        </HBox>
+                                    </children>
+                                </HBox>
+                            </children>
+                        </AnchorPane>
+                    </top>
+                </BorderPane>
+            </children>
+        </StackPane>
+    </children>
+    <stylesheets>
+        <URL value="@../css/Dashboard.css" />
+        <URL value="@../css/custom.css" />
+    </stylesheets>
+</AnchorPane>

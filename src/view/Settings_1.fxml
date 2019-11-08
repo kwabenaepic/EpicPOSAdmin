@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXSpinner?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import java.net.URL?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SettingsController">
+   <children>
+      <BorderPane AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="0.0">
+         <center>
+            <AnchorPane prefWidth="600.0">
+               <children>
+                  <TabPane layoutX="50.0" nodeOrientation="LEFT_TO_RIGHT" tabMinHeight="50.0" tabMinWidth="50.0">
+                     <tabs>
+                        <Tab closable="false" text="Company Info">
+                           <content>
+                              <AnchorPane id="AnchorPane">
+                                 <children>
+                                    <VBox prefWidth="442.0" spacing="5.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="221.0" AnchorPane.topAnchor="0.0">
+                                       <children>
+                                          <JFXTextField fx:id="jtfCompanyName" labelFloat="true" promptText="Company Name">
+                                             <VBox.margin>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="25.0" />
+                                             </VBox.margin>
+                                          </JFXTextField>
+                                          <JFXTextField fx:id="jtfContactOne" labelFloat="true" promptText="Contact 1">
+                                             <VBox.margin>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                             </VBox.margin>
+                                          </JFXTextField>
+                                          <JFXTextField fx:id="jtfContactTwo" labelFloat="true" promptText="Contact 2">
+                                             <VBox.margin>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                             </VBox.margin>
+                                          </JFXTextField>
+                                          <JFXTextField fx:id="jtfLocation" labelFloat="true" promptText="Location">
+                                             <VBox.margin>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                             </VBox.margin>
+                                          </JFXTextField>
+                                          <JFXTextArea fx:id="jtaAddress" prefHeight="80.0" prefWidth="392.0" promptText="Address">
+                                             <VBox.margin>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                             </VBox.margin>
+                                          </JFXTextArea>
+                                          <JFXPasswordField fx:id="password" labelFloat="true" promptText="Password">
+                                             <VBox.margin>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                             </VBox.margin>
+                                          </JFXPasswordField>
+                                          <HBox alignment="CENTER" spacing="25.0">
+                                             <children>
+                                                <JFXButton buttonType="RAISED" onAction="#handleSaveButtonAction" prefHeight="50.0" prefWidth="100.0" styleClass="btnTender" text="Save" />
+                                                <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="100.0" styleClass="btnTender" text="Cancel" />
+                                             </children>
+                                             <VBox.margin>
+                                                <Insets top="10.0" />
+                                             </VBox.margin>
+                                          </HBox>
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                                       </padding>
+                                    </VBox>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </Tab>
+                        <Tab closable="false" styleClass="settings-tab" text="Mail Server">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" styleClass="custom-pane">
+                                 <children>
+                                    <VBox prefHeight="385.0" prefWidth="585.0" spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <children>
+                                          <JFXTextField fx:id="serverName" labelFloat="true" promptText="SMTP Server Name">
+                                             <VBox.margin>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="25.0" />
+                                             </VBox.margin>
+                                          </JFXTextField>
+                                          <JFXTextField fx:id="smtpPort" labelFloat="true" promptText="SMTP Port">
+                                             <VBox.margin>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                             </VBox.margin>
+                                          </JFXTextField>
+                                          <JFXTextField fx:id="emailAddress" labelFloat="true" promptText="Email Address">
+                                             <VBox.margin>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                             </VBox.margin>
+                                          </JFXTextField>
+                                          <JFXPasswordField fx:id="emailPassword" labelFloat="true" promptText="Email Password">
+                                             <VBox.margin>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                             </VBox.margin>
+                                          </JFXPasswordField>
+                                          <JFXCheckBox fx:id="sslCheckbox" prefHeight="17.0" prefWidth="239.0" selected="true" styleClass="checkbox-main" text="Enable TLS" />
+                                          <HBox alignment="CENTER" prefHeight="43.0" prefWidth="512.0" spacing="25.0">
+                                             <children>
+                                                <JFXButton onAction="#handleTestMailAction" prefHeight="43.0" prefWidth="183.0" text="Send Test Mail" />
+                                                <JFXButton onAction="#saveMailServerConfuration" prefHeight="100.0" prefWidth="100.0" text="Save" />
+                                             </children>
+                                             <VBox.margin>
+                                                <Insets top="10.0" />
+                                             </VBox.margin>
+                                          </HBox>
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                                       </padding>
+                                    </VBox>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </Tab>
+                        <Tab closable="false" styleClass="settings-tab" text="Export">
+                           <content>
+                              <AnchorPane id="AnchorPane" prefHeight="304.0" prefWidth="402.0" styleClass="custom-pane">
+                                 <children>
+                                    <JFXButton layoutX="200.0" layoutY="129.0" onAction="#handleDatabaseExportAction" prefHeight="60.0" prefWidth="185.0" text="Export Database" />
+                                    <JFXSpinner fx:id="progressSpinner" layoutX="268.0" layoutY="207.0" visible="false" />
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </Tab>
+                     </tabs>
+                  </TabPane>
+               </children>
+            </AnchorPane>
+         </center>
+         <top>
+            <VBox spacing="5.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label style="-fx-font-size: 20; -fx-font-weight: bold;" text="Settings" />
+                  <Separator prefHeight="4.0" prefWidth="1213.0" />
+               </children>
+               <padding>
+                  <Insets top="10.0" />
+               </padding>
+               <BorderPane.margin>
+                  <Insets bottom="50.0" />
+               </BorderPane.margin>
+            </VBox>
+         </top>
+      </BorderPane>
+   </children>
+      <stylesheets>
+        <URL value="@../css/Modena" />
+         </stylesheets>
+</AnchorPane>

@@ -1,0 +1,209 @@
+
+/*
+    Created on : Jun 13, 2015, 3:29:41 PM
+    Author     : rifat
+*/
+.buttonMenu{
+    /*-fx-background-image: url("../images/CoarseGrid.png");*/
+    -fx-background-color:
+        transparent;
+    -fx-text-fill: white;
+    -fx-border-color: #191d22;
+    -fx-background-insets: 0,1,2;
+    -fx-padding:5 0 5 0;
+    /*radial-gradient(center 50% 0%, radius 100%, rgba(114,131,148,0.9), rgba(255,255,255,0));*/
+
+
+    /*    -fx-border-width: 0px 0px 0px 0px;
+        -fx-border-radius: 0px;
+        -fx-border-color: #0d172e;
+        -fx-background-insets: 0;
+        -fx-background-radius: 0px;
+        -fx-font-size: 12px;
+            -fx-border-color: white;
+        -fx-text-fill: #e1ffff;
+            -fx-border-radius: 50px;
+            -fx-background-radius: 50px;
+        -fx-background-image: url("../images/CoarseGrid.png");
+        -fx-background-color: #2e353d;
+        -fx-border-bottom: 1px solid #23282e;
+            -fx-font-size: 15px;
+            -fx-padding: 5px 25px;
+        -fx-font-weight:700;
+        -fx-font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;*/
+    /*        -fx-background-color: linear-gradient(#ff5400, #be1d00);
+        -fx-background-radius: 30;
+        -fx-background-insets: 0;
+        -fx-background-radius: 8,7,6;
+        -fx-background-insets: 0,1,2;
+        -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );*/
+
+}
+
+.buttonMenu:focused{
+    -fx-border-width: 0px 0px 0px 0px;
+    /*-fx-background-color: #4f5b69;*/
+    -fx-background-image: url("../images/CoarseGrid.png");
+    -fx-background-color:
+        /*linear-gradient(#38424b 0%, #1f2429 20%, #191d22 100%),*/
+        linear-gradient(#20262b, #191d22),
+        radial-gradient(center 70% 0%, radius 100%, rgba(114,131,148,0.9), rgba(255,255,255,0));
+
+}
+.buttonMenu:pressed{
+    -fx-text-fill: white;
+}
+.buttonMenu:hover{
+    -fx-background-image: url("../images/CoarseGrid.png");
+    -fx-background-color:
+        /*linear-gradient(#38424b 0%, #1f2429 20%, #191d22 100%),*/
+        linear-gradient(#20262b, #191d22),
+        radial-gradient(center 30% 0%, radius 40%, rgba(114,131,148,0.9), rgba(255,255,255,0));
+    -fx-bottom-left: 5px solid #ff9900;
+    -fx-effect: dropshadow( three-pass-box , #ff9900 , 0, 0, 4 , 0 );
+    -fx-text-fill: #FFFFFF;
+    /*        linear-gradient(#38424b 0%, #1f2429 20%, #191d22 100%),
+            linear-gradient(#20262b, #191d22),
+            radial-gradient(center 50% 0%, radius 100%, rgba(114,131,148,0.9), rgba(255,255,255,0));*/
+    /*-fx-text-fill: #ff9900;*/
+}
+#imgHome:hover{
+    /*-fx-background-image: url("../images/home.png");*/
+
+}
+
+
+.scroll-pane {
+
+    /*    -fx-background-insets: 0;*/
+    -fx-padding: 0;
+    -fx-background:#282E34;
+}
+
+.list-view .scroll-bar:horizontal .track,
+.list-view .scroll-bar:vertical .track{
+
+    -fx-border-color:derive(#D7D7D7,100%);
+    -fx-background-color: derive(#D7D7D7,100%);
+    -fx-background-radius: 2em;
+    -fx-border-radius:2em;
+}
+
+/*The main scrollbar   which we drag every time (movable)*/
+.list-view .scroll-bar:horizontal .thumb,
+.list-view .scroll-bar:vertical .thumb {
+    -fx-background-color:derive(black,90%);
+    -fx-background-insets: 2, 0, 0;
+    -fx-background-radius: 2em;
+
+}
+.list-view .scroll-bar:horizontal .increment-button ,
+.list-view .mylistview .scroll-bar:horizontal .decrement-button {
+
+    -fx-border-color:derive(#D7D7D7,100%);
+    -fx-background-color: derive(#D7D7D7,100%);
+    /*    -fx-background-color:transparent;*/
+    -fx-background-radius: 0em;
+    -fx-padding:0 0 10 0;
+
+}
+.list-view .scroll-bar:horizontal .increment-arrow,
+.list-view .scroll-bar:horizontal .decrement-arrow,
+.list-view .scroll-bar:horizontal .increment-button,
+.list-view .scroll-bar:horizontal .decrement-button {
+    visibility: hidden;
+    -fx-border-color:derive(#D7D7D7,100%);
+    -fx-background-color: derive(#D7D7D7,100%);
+    -fx-padding:0;
+}
+.list-view .scroll-bar:horizontal .increment-button ,
+.list-view .mylistview .scroll-bar:horizontal .decrement-button {
+
+    -fx-border-color:derive(#D7D7D7,100%);
+    -fx-background-color: derive(#D7D7D7,100%);
+    /*    -fx-background-color:transparent;*/
+    -fx-background-radius: 0em;
+    -fx-padding:0 0 10 0;
+
+}
+.list-view .scroll-bar:vertical .increment-arrow,
+.list-view .scroll-bar:vertical .decrement-arrow,
+.list-view .scroll-bar:vertical .increment-button,
+.list-view .scroll-bar:vertical .decrement-button {
+
+    /*    -fx-border-color:derive(#D7D7D7,100%);
+        -fx-background-color: derive(#D7D7D7,100%);
+        -fx-padding:0;*/
+}
+.list-view .scroll-bar:vertical .increment-button ,
+.list-view .mylistview .scroll-bar:vertical .decrement-button {
+
+    /*    -fx-border-color:derive(#D7D7D7,100%);
+        -fx-background-color: derive(#D7D7D7,100%);
+            -fx-background-color:transparent;
+        -fx-background-radius: 0em;
+        -fx-padding:0 0 10 0;*/
+
+}
+
+
+#sideMenuToogleBtn{
+    -fx-padding: 0;
+    -fx-background-color: transparent;
+}
+#sideMenuToogleBtn:hover{
+    -fx-background-color: none;
+}
+#btnLogOut{
+
+}
+#acHead{
+    /*-fx-background-image: url("../images/CoarseGrid.png");*/
+    -fx-background-color:
+        linear-gradient(#38424b 0%, #1f2429 20%, #191d22 100%),
+        linear-gradient(#191d22, #20262b),
+        radial-gradient(center 30% 0%, radius 100%, rgba(114,131,148,0.9), rgba(255,255,255,0));
+
+}
+#acDashBord{
+    -fx-background-image: url("../images/CoarseGrid.png");
+    -fx-background-color:
+        linear-gradient(#38424b 0%, #1f2429 20%, #191d22 100%),
+        linear-gradient(#191d22,#20262b),
+        radial-gradient(center 50% 0%, radius 100%, rgba(114,131,148,0.9), rgba(255,255,255,0));
+}
+#mbtnUsrInfoBox{
+    -fx-background-color:#2e353d;
+    -fx-text-fill: white;
+}
+#mbtnUsrInfoBox:hover, #mbtnUsrInfoBox:focused{
+    /*-fx-background-color:#494949;*/
+}
+#circleImgUsr{
+    -fx-padding: 0;
+}
+#lblUsrName{
+    -fx-text-fill: white;
+}
+.labelColor {
+    -fx-text-fill: #FFFFFF;
+
+}
+#btnLogout{
+    -fx-background-color: #ffffff;
+    -fx-text-fill: black;
+    -fx-border-width: 0px 0px 0px 0px;
+    -fx-border-radius: 0px;
+    -fx-background-radius: 0px;
+    /*-fx-background-image: url("../images/lock.png");*/
+    /*    -fx-background-repeat: stretch;
+        -fx-background-position: center center;*/
+}
+#btnLogout:hover{
+    -fx-background-color: #FFA73B;
+    -fx-cursor: hand;
+    -fx-rotate: 3;
+    transition-delay: 2s;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);
+    /*-fx-background-image: url("../images/close.png");*/
+}

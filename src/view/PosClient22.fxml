@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import org.controlsfx.control.textfield.CustomTextField?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.PosClientController">
+    <children>
+        <VBox alignment="CENTER" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <HBox styleClass="hbox-header">
+                    <children>
+                        <ImageView fx:id="ivUserImage" fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true" styleClass="image-view" HBox.hgrow="ALWAYS">
+                            <effect>
+                                <Lighting>
+                                    <bumpInput>
+                                        <Shadow />
+                                    </bumpInput>
+                                    <light>
+
+                                    </light>
+                                </Lighting>
+                            </effect>
+                        </ImageView>
+                        <VBox alignment="BOTTOM_LEFT">
+                            <children>
+                                <Label fx:id="staffNameLbl" alignment="BOTTOM_LEFT" styleClass="labelColor" text="Kwabena Epic" textFill="WHITE">
+                                    <font>
+                                        <Font size="18.0" />
+                                    </font>
+                                </Label>
+                            </children>
+                            <HBox.margin>
+                                <Insets left="5.0" />
+                            </HBox.margin>
+                        </VBox>
+                        <Region HBox.hgrow="ALWAYS" />
+                        <VBox alignment="CENTER" HBox.hgrow="ALWAYS">
+                            <children>
+                                <Label styleClass="labelColor" text=" ENT" textFill="#fffdfd">
+                                    <font>
+                                        <Font size="30.0" />
+                                    </font>
+                                </Label>
+                            </children>
+                        </VBox>
+                        <Region HBox.hgrow="ALWAYS" />
+                        <VBox alignment="CENTER_RIGHT" HBox.hgrow="ALWAYS">
+                            <children>
+                                <Label fx:id="dateLocal" styleClass="labelColor" text="08 Dec 2015" textFill="WHITE">
+                                    <font>
+                                        <Font size="20.0" />
+                                    </font>
+                                </Label>
+                                <HBox alignment="CENTER_RIGHT" spacing="3.0">
+                                    <children>
+                                        <Label fx:id="lblHour" alignment="CENTER" styleClass="labelColor" text="0" textFill="WHITE">
+                                            <font>
+                                                <Font size="25.0" />
+                                            </font>
+                                        </Label>
+                                        <Label fx:id="dateLocal1" styleClass="labelColor" text=":" textFill="WHITE">
+                                            <font>
+                                                <Font size="25.0" />
+                                            </font>
+                                        </Label>
+                                        <Label fx:id="lblMinutes" alignment="CENTER" styleClass="labelColor" text="00" textFill="WHITE">
+                                            <font>
+                                                <Font size="25.0" />
+                                            </font>
+                                        </Label>
+                                        <Label fx:id="dateLocal11" styleClass="labelColor" text=":" textFill="WHITE">
+                                            <font>
+                                                <Font size="25.0" />
+                                            </font>
+                                        </Label>
+                                        <Label fx:id="lblSeconds" alignment="CENTER" styleClass="labelColor" text="00" textFill="WHITE">
+                                            <font>
+                                                <Font size="25.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </HBox>
+                            </children>
+                        </VBox>
+                    </children>
+                </HBox>
+                <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" styleClass="background" VBox.vgrow="ALWAYS">
+                    <children>
+                        <HBox AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+                            <children>
+                                <VBox spacing="10.0" styleClass="hbox-detail" HBox.hgrow="ALWAYS">
+                                    <children>
+                                        <CustomTextField fx:id="tfFieldSearch" onAction="#fieldSearchOnAction" prefHeight="50.0" promptText="ENTER OR SCAN PRODUCT">
+                                            <left>
+                                                <Label styleClass="searchBoxLabel">
+                                                    <graphic>
+                                                    </graphic>
+                                                </Label>
+                                            </left>
+                                            <font>
+                                                <Font size="18.0" />
+                                            </font>
+                                        </CustomTextField>
+
+                                        <TableView fx:id="table" prefWidth="822.0" styleClass="table-View" VBox.vgrow="ALWAYS">
+                                            <columns>
+                                                <TableColumn fx:id="itemIdColumn" text="Item £" />
+                                                <TableColumn fx:id="nameColumn" prefWidth="400.0" text="Item Name" />
+                                                <TableColumn text="Attribute" />
+                                                <TableColumn fx:id="priceColumn" text="Price" />
+                                                <TableColumn fx:id="quantityColumn" text="Qty" />
+                                                <TableColumn fx:id="actionColumn" prefWidth="100.0" text="Action" />
+                                            </columns>
+                                        </TableView>
+                                        <Separator VBox.vgrow="ALWAYS" />
+                                        <HBox spacing="20.0">
+                                            <children>
+                                                <HBox spacing="150.0">
+                                                    <children>
+                                                        <VBox spacing="5.0">
+                                                            <children>
+                                                                <Label alignment="CENTER_RIGHT" text="Sub total: " wrapText="true">
+                                                                    <font>
+                                                                        <Font size="22.0" />
+                                                                    </font>
+                                                                </Label>
+                                                                <Label alignment="CENTER_RIGHT" text="VAT 17.5%: " wrapText="true">
+                                                                    <font>
+                                                                        <Font name="System Bold" size="22.0" />
+                                                                    </font>
+                                                                </Label>
+                                                                <Label alignment="CENTER_RIGHT" styleClass="labelColorRed" text="Discount:" textFill="#eb0000" wrapText="true">
+                                                                    <font>
+                                                                        <Font size="22.0" />
+                                                                    </font>
+                                                                </Label>
+                                                            </children>
+                                                        </VBox>
+                                                        <VBox alignment="TOP_RIGHT" spacing="5.0">
+                                                            <children>
+                                                                <Label fx:id="subTotalLbl" text="0.0">
+                                                                    <font>
+                                                                        <Font size="22.0" />
+                                                                    </font>
+                                                                </Label>
+                                                                <Label fx:id="taxLbl" text="0.0">
+                                                                    <font>
+                                                                        <Font size="22.0" />
+                                                                    </font>
+                                                                </Label>
+                                                                <Label fx:id="lblDiscount" styleClass="labelColorRed" text="0.0" textFill="RED" wrapText="true">
+                                                                    <font>
+                                                                        <Font size="22.0" />
+                                                                    </font>
+                                                                </Label>
+                                                            </children>
+                                                        </VBox>
+                                                    </children>
+                                                </HBox>
+                                                <Region HBox.hgrow="ALWAYS" />
+                                                <HBox spacing="20.0">
+                                                    <children>
+                                                        <VBox spacing="5.0">
+                                                            <children>
+                                                                <Label alignment="CENTER_RIGHT" text="Cash Paid: " wrapText="true">
+                                                                    <font>
+                                                                        <Font size="22.0" />
+                                                                    </font>
+                                                                </Label>
+                                                                <Label alignment="CENTER_RIGHT" styleClass="labelColorRed" text="Balance:" textFill="#eb0000" wrapText="true">
+                                                                    <font>
+                                                                        <Font size="22.0" />
+                                                                    </font>
+                                                                </Label>
+                                                            </children>
+                                                        </VBox>
+                                                        <VBox spacing="8.0">
+                                                            <children>
+                                                                <TextField fx:id="tfCashPaid" alignment="CENTER" onAction="#cashPaidOnAction" prefHeight="30.0" prefWidth="140.0" promptText="Cash Paid" />
+                                                                <Label fx:id="lblBalance" alignment="CENTER_RIGHT" styleClass="labelColorRed" text="0.0" textFill="#eb0000" wrapText="true">
+                                                                    <font>
+                                                                        <Font size="22.0" />
+                                                                    </font>
+                                                                </Label>
+                                                            </children>
+                                                        </VBox>
+                                                    </children>
+                                                </HBox>
+                                                <Region HBox.hgrow="ALWAYS" />
+                                                <VBox alignment="CENTER_RIGHT" spacing="5.0">
+                                                    <children>
+                                                        <Label text="Total" wrapText="true">
+                                                            <font>
+                                                                <Font name="System Bold" size="30.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <Label fx:id="lblTotal" text="0.0" wrapText="true">
+                                                            <font>
+                                                                <Font name="System Bold" size="30.0" />
+                                                            </font>
+                                                        </Label>
+                                                    </children>
+                                                    <HBox.margin>
+                                                        <Insets right="20.0" />
+                                                    </HBox.margin>
+                                                </VBox>
+                                            </children>
+                                        </HBox>
+                                    </children>
+                                </VBox>
+                                <Region />
+                                <VBox alignment="CENTER_RIGHT">
+                                    <children>
+                                        <HBox alignment="CENTER_LEFT" spacing="10.0" VBox.vgrow="ALWAYS">
+                                            <children>
+                                                <Label alignment="CENTER" text="Ticket No." textFill="WHITE" HBox.hgrow="ALWAYS">
+                                                    <font>
+                                                        <Font size="15.0" />
+                                                    </font>
+                                                </Label>
+                                                <Label fx:id="ticketNumberLbl" alignment="CENTER" text="0025489" textFill="WHITE" HBox.hgrow="ALWAYS">
+                                                    <font>
+                                                        <Font size="30.0" />
+                                                    </font>
+                                                </Label>
+                                            </children>
+                                        </HBox>
+                                        <Region VBox.vgrow="ALWAYS" />
+                                        <VBox alignment="CENTER_RIGHT" VBox.vgrow="ALWAYS">
+                                            <children>
+                                                <HBox alignment="CENTER" spacing="10.0" VBox.vgrow="ALWAYS">
+                                                    <children>
+                                                        <Button mnemonicParsing="false" styleClass="button2" HBox.hgrow="ALWAYS">
+                                                            <graphic>
+                                                                <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                                                    <image>
+                                                                        <Image url="@../images/cart.png" />
+                                                                    </image>
+                                                                </ImageView>
+                                                            </graphic>
+                                                        </Button>
+                                                        <Button layoutX="10.0" layoutY="10.0" minHeight="70.0" mnemonicParsing="false" styleClass="button2" HBox.hgrow="ALWAYS">
+                                                            <graphic>
+                                                                <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                                                    <image>
+                                                                        <Image url="@../images/cart.png" />
+                                                                    </image>
+                                                                </ImageView>
+                                                            </graphic>
+                                                        </Button>
+                                                        <Button layoutX="134.0" layoutY="10.0" minHeight="70.0" mnemonicParsing="false" styleClass="button2" HBox.hgrow="ALWAYS">
+                                                            <graphic>
+                                                                <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                                                    <image>
+                                                                        <Image url="@../images/cart.png" />
+                                                                    </image>
+                                                                </ImageView>
+                                                            </graphic>
+                                                        </Button>
+                                                    </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER" spacing="10.0" VBox.vgrow="ALWAYS">
+                                                    <children>
+                                                        <Button mnemonicParsing="false" styleClass="button2">
+                                                            <graphic>
+                                                                <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                                                    <image>
+                                                                        <Image url="@../images/cart.png" />
+                                                                    </image>
+                                                                </ImageView>
+                                                            </graphic>
+                                                        </Button>
+                                                        <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" styleClass="button2">
+                                                            <graphic>
+                                                                <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                                                    <image>
+                                                                        <Image url="@../images/cart.png" />
+                                                                    </image>
+                                                                </ImageView>
+                                                            </graphic>
+                                                        </Button>
+                                                        <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" styleClass="button2">
+                                                            <graphic>
+                                                                <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                                                    <image>
+                                                                        <Image url="@../images/cart.png" />
+                                                                    </image>
+                                                                </ImageView>
+                                                            </graphic>
+                                                        </Button>
+                                                    </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER" spacing="10.0" VBox.vgrow="ALWAYS">
+                                                    <children>
+                                                        <Button mnemonicParsing="false" prefHeight="80.0" prefWidth="80.0" styleClass="button2">
+                                                            <graphic>
+                                                                <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                                                    <image>
+                                                                        <Image url="@../images/cart.png" />
+                                                                    </image>
+                                                                </ImageView>
+                                                            </graphic>
+                                                        </Button>
+                                                        <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" styleClass="button2">
+                                                            <graphic>
+                                                                <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                                                    <image>
+                                                                        <Image url="@../images/cart.png" />
+                                                                    </image>
+                                                                </ImageView>
+                                                            </graphic>
+                                                        </Button>
+                                                        <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" styleClass="button2">
+                                                            <graphic>
+                                                                <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                                                    <image>
+                                                                        <Image url="@../images/cart.png" />
+                                                                    </image>
+                                                                </ImageView>
+                                                            </graphic>
+                                                        </Button>
+                                                    </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER" spacing="10.0" VBox.vgrow="ALWAYS">
+                                                    <children>
+                                                        <Button fx:id="btnClear" mnemonicParsing="false" onAction="#btnClearOnAction" style="-fx-background-color: #CF2A2A;" styleClass="button2">
+                                                            <graphic>
+                                                                <ImageView fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                                                                    <image>
+                                                                        <Image url="@../images/close.png" />
+                                                                    </image>
+                                                                </ImageView>
+                                                            </graphic>
+                                                        </Button>
+                                                        <Button fx:id="btnDiscount" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#btnDiscountOnAction" styleClass="button2">
+                                                            <graphic>
+                                                                <ImageView fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                                                                    <image>
+                                                                        <Image url="@../images/discount.png" />
+                                                                    </image>
+                                                                </ImageView>
+                                                            </graphic>
+                                                        </Button>
+                                                        <Button fx:id="btnHoldSale" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#btnHoldSaleOnAction" styleClass="button2">
+                                                            <graphic>
+                                                                <ImageView fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                                                                    <image>
+                                                                        <Image url="@../images/holdcart.png" />
+                                                                    </image>
+                                                                </ImageView>
+                                                            </graphic>
+                                                        </Button>
+                                                    </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER" VBox.vgrow="ALWAYS">
+                                                    <children>
+                                                        <Button fx:id="btnCheckout" mnemonicParsing="false" onAction="#checkout" style="-fx-background-color: #37C221;" styleClass="buttonSho" HBox.hgrow="ALWAYS">
+                                                            <graphic>
+                                                                <ImageView fitHeight="91.0" fitWidth="240.0" pickOnBounds="true" preserveRatio="true">
+                                                                    <image>
+                                                                        <Image url="@../images/SHOP2.gif" />
+                                                                    </image>
+                                                                    <viewport>
+                                                                        <Rectangle2D />
+                                                                    </viewport>
+                                                                </ImageView>
+                                                            </graphic>
+                                                        </Button>
+                                                    </children>
+                                                </HBox>
+                                            </children>
+                                        </VBox>
+                                    </children>
+                                    <padding>
+                                        <Insets left="10.0" right="10.0" top="5.0" />
+                                    </padding>
+                                </VBox>
+                            </children>
+                        </HBox>
+                    </children>
+                </AnchorPane>
+            </children>
+        </VBox>
+    </children>
+    <stylesheets>
+        <URL value="@../css/Modena.css" />
+        <URL value="@../css/PosClient.css" />
+        <URL value="@../css/main.css" />
+    </stylesheets>
+</AnchorPane>

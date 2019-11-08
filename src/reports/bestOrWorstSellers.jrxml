@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="167edd3d-676d-499f-9b8e-032494cdfd7e">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[SELECT * FROM productsbyticketnumber  ORDER by quantityBought DESC;]]>
+	</queryString>
+	<field name="productId" class="java.lang.Integer"/>
+	<field name="productName" class="java.lang.String"/>
+	<field name="productDescription" class="java.lang.String"/>
+	<field name="unitPrice" class="java.lang.Double"/>
+	<field name="total" class="java.lang.Double"/>
+	<field name="quantityBought" class="java.lang.Integer"/>
+	<field name="ticketNumber" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="18" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="79" height="18" uuid="b5438bf8-5b5a-4a95-9fb7-fb8fa33daac5"/>
+				<text><![CDATA[productId]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="79" y="0" width="79" height="18" uuid="7b8fbbd9-3140-4d2d-919b-7ee3660c3ae7"/>
+				<text><![CDATA[productName]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="158" y="0" width="79" height="18" uuid="cac6beac-4be6-4919-a8fd-f7f78956d04c"/>
+				<text><![CDATA[productDescription]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="237" y="0" width="79" height="18" uuid="69243c54-8c3f-4c13-bbf3-808f896211d8"/>
+				<text><![CDATA[unitPrice]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="316" y="0" width="79" height="18" uuid="aab39b74-2154-4bd1-92fb-31b9f7f0fb27"/>
+				<text><![CDATA[total]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="395" y="0" width="79" height="18" uuid="d787362f-05f0-46fd-9b2d-52e0534d8ba8"/>
+				<text><![CDATA[quantityBought]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="474" y="0" width="79" height="18" uuid="a01c5d0a-accf-4f8d-95af-a557252a2937"/>
+				<text><![CDATA[ticketNumber]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="18" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="79" height="17" uuid="0dac1251-0f3f-46f8-9c35-0dd42ae16810"/>
+				<textFieldExpression><![CDATA[$F{productId}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="79" y="0" width="79" height="17" uuid="d77bd515-290c-4bf6-9efc-92b1c9d88a39"/>
+				<textFieldExpression><![CDATA[$F{productName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="158" y="0" width="79" height="17" uuid="e64f01b3-8062-4769-b0bd-9f8a1a453cc8"/>
+				<textFieldExpression><![CDATA[$F{productDescription}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="237" y="0" width="79" height="17" uuid="dec89108-706a-4525-a699-402deed52bb6"/>
+				<textFieldExpression><![CDATA[$F{unitPrice}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="316" y="0" width="79" height="17" uuid="4e2ec460-694b-45c0-8f53-87a9684c0c52"/>
+				<textFieldExpression><![CDATA[$F{total}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="395" y="0" width="79" height="17" uuid="77bdaa69-96b6-44e6-98ad-2952da750289"/>
+				<textFieldExpression><![CDATA[$F{quantityBought}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="474" y="0" width="79" height="17" uuid="c8dd6e96-acac-495c-9948-0aa547406fc4"/>
+				<textFieldExpression><![CDATA[$F{ticketNumber}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

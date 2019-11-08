@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportSales" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="949ffca6-e1c2-4fcd-9bcc-0392c2feac54">
+	<property name="ireport.zoom" value="3.0"/>
+	<property name="ireport.x" value="924"/>
+	<property name="ireport.y" value="216"/>
+	<queryString>
+		<![CDATA[select `posdata`.`receipts`.`receiptsId` AS `receiptsId`,`posdata`.`receipts`.`salesOutletId` AS `salesOutletId`,`posdata`.`receipts`.`ticketNumber` AS `ticketNumber`,`posdata`.`receipts`.`receiptDate` AS `receiptDate`,`posdata`.`receipts`.`modeOfPayment` AS `modeOfPayment`,sum(`posdata`.`saleitems`.`quantity`) AS `numberOfItems`,sum((`posdata`.`product`.`unitPrice` * `posdata`.`saleitems`.`quantity`)) AS `total`,`posdata`.`employee`.`id` AS `employeeId`,`posdata`.`employee`.`id` AS `lastName`,`posdata`.`receipts`.`amountPaid` AS `amountPaid`,`posdata`.`receipts`.`balance` AS `balance` from ((`posdata`.`product` left join (`posdata`.`saleitems` left join `posdata`.`receipts` on((`posdata`.`saleitems`.`ticketNumber` = `posdata`.`receipts`.`ticketNumber`))) on((`posdata`.`saleitems`.`productId` = `posdata`.`product`.`productId`))) join `posdata`.`employee` on((`posdata`.`receipts`.`employeeId` = `posdata`.`employee`.`id`))) group by `posdata`.`receipts`.`ticketNumber`]]>
+	</queryString>
+	<field name="receiptsId" class="java.lang.Long">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="salesOutletId" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="ticketNumber" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="receiptDate" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="modeOfPayment" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="numberOfItems" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="total" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="employeeId" class="java.lang.Integer"/>
+	<field name="lastName" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="amountPaid" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="balance" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="20" splitType="Stretch">
+			<staticText>
+				<reportElement x="1" y="0" width="100" height="20" uuid="0296501e-ffbe-4ec7-b51f-ede11cf6cb56"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="107" y="0" width="98" height="20" uuid="9954eec2-c196-4d78-9f08-67a073a99e51"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Sale Outlet]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="269" y="0" width="67" height="20" uuid="3dfc0328-3f1d-472e-82e3-023e4e68ad40"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[No. Of Items]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="212" y="0" width="31" height="20" uuid="6a223911-94f0-449e-8f6c-48acafd0101d"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Teller]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="340" y="0" width="72" height="20" uuid="2850b583-0234-440d-8384-388cbc08bf80"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Amount Paid]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="415" y="0" width="55" height="20" uuid="a0dd7558-a00f-4e2b-bc54-28ac603d729f"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Balance]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="477" y="0" width="52" height="20" uuid="7d7077fc-4110-44cb-8265-78d81b9b7f3a"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="535" y="0" width="100" height="20" uuid="a13b84f3-ad57-492d-a89a-1ceb6e9b3df5"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Mode Of Payment]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="644" y="0" width="100" height="20" uuid="e2669fa7-2360-4c92-9204-3f78e696d09e"/>
+				<text><![CDATA[Ticket Number]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="18" splitType="Stretch">
+			<textField>
+				<reportElement x="1" y="0" width="100" height="18" uuid="57df4b0f-7ce0-4f36-80f6-2436aef1d719"/>
+				<textFieldExpression><![CDATA[$F{receiptDate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="107" y="0" width="98" height="18" uuid="07ed58ea-08b6-4842-a0dd-3639bff1c002"/>
+				<textFieldExpression><![CDATA[$F{salesOutletId}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="269" y="0" width="67" height="18" uuid="ab11e4c8-e35d-4a3f-8946-2dfe43977908"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{numberOfItems}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="212" y="0" width="31" height="18" uuid="97bdb075-df9f-494a-a569-28fbbfedfe4f"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{employeeId}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="340" y="0" width="72" height="18" uuid="8d3d9772-1bad-49f7-aec2-2b67e046cd1f"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{amountPaid}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="415" y="0" width="55" height="18" uuid="71b1e82e-35a3-4b35-ac70-92a2aa1b283c"/>
+				<textFieldExpression><![CDATA[$F{balance}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="477" y="0" width="52" height="18" uuid="e387f9ec-2e58-49bf-a210-55732749626d"/>
+				<textFieldExpression><![CDATA[$F{total}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="535" y="0" width="100" height="18" uuid="aa0390b6-b23e-43bb-a848-0d2b8329dcfd"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{modeOfPayment}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="644" y="0" width="100" height="18" uuid="7e00479d-a6b2-4c06-b8c5-ed1084a4a396"/>
+				<textFieldExpression><![CDATA[$F{ticketNumber}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
