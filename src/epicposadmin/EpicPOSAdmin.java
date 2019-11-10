@@ -84,9 +84,10 @@ public class EpicPOSAdmin extends Application {
         Scene scene = new Scene(page, screenBounds.getWidth(), screenBounds.getHeight());
 //      Scene scene = new Scene(page);
         stage.setScene(scene);
+        stage.initStyle(StageStyle.TRANSPARENT);
         stage.sizeToScene();
         stage.show();
-//      stage.setMaximized(true);
+        stage.setMaximized(true);
         return (Initializable) loader.getController();
     }
 
@@ -125,25 +126,6 @@ public class EpicPOSAdmin extends Application {
         } catch (Exception ex) {
             Logger.getLogger(EpicPOSAdmin.class.getName()).log(Level.SEVERE, null, ex);
         }
-
-//      FXMLLoader fXMLLoader = new FXMLLoader();
-//      fXMLLoader.setLocation(getClass().getResource("/view/login.fxml"));
-//      // initializing the controller
-        // DailyStockReceiptsController dailystockReceiptsController = new DailyStockReceiptsController();
-//      fXMLLoader.setController(dailystockReceiptsController);
-//      try {
-//          fXMLLoader.load();
-//          Parent parent = fXMLLoader.getRoot();
-//          Scene scene = new Scene(parent);
-//          scene.setFill(new Color(0, 0, 0, 0));
-//          Stage stage = new Stage();
-//          stage.setScene(scene);
-//          stage.initModality(Modality.APPLICATION_MODAL);
-//          stage.initStyle(StageStyle.TRANSPARENT);
-//          stage.show();
-//      } catch (IOException ex) {
-//          Logger.getLogger(EpicPOSAdmin.class.getName()).log(Level.SEVERE, null, ex);
-//      }
     }
 
     public void gotoProfile() {
