@@ -110,7 +110,7 @@
                         </BorderPane>
                     </center>
                     <top>
-                        <AnchorPane fx:id="acHead">
+                        <AnchorPane fx:id="acHead" prefHeight="70.0">
                             <children>
                                 <HBox AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
                                     <children>
@@ -120,7 +120,7 @@
                                        <children>
                                           <HBox alignment="CENTER" prefWidth="80.0">
                                              <children>
-                                                <ImageView fitHeight="40.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                                <ImageView fitHeight="50.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
                                                    <image>
                                                       <Image url="@../images/splash.png" />
                                                    </image>
@@ -136,67 +136,79 @@
                                             </children>
                                         </HBox>
                                         <Region HBox.hgrow="ALWAYS" />
-                              <HBox alignment="CENTER" spacing="30.0" styleClass="labelColor">
+                              <HBox spacing="50.0">
                                  <children>
-                                    <HBox alignment="CENTER" spacing="3.0">
+                                    <VBox>
                                        <children>
-                                          <Label fx:id="lblHour" alignment="CENTER" styleClass="labelColor" text="0" textFill="WHITE">
+                                          <HBox alignment="CENTER" spacing="3.0">
+                                             <children>
+                                                <Label fx:id="lblHour" alignment="CENTER" style="-fx-font-size: 30;" styleClass="labelColor" text="0" textFill="WHITE">
+                                                   <font>
+                                                      <Font size="25.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="dateLocal1" styleClass="labelColor" text=":" textFill="WHITE">
+                                                   <font>
+                                                      <Font size="25.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="lblMinutes" alignment="CENTER" style="-fx-font-size: 30;" styleClass="labelColor" text="00" textFill="WHITE">
+                                                   <font>
+                                                      <Font size="25.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="dateLocal11" styleClass="labelColor" text=":" textFill="WHITE">
+                                                   <font>
+                                                      <Font size="25.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="lblSeconds" alignment="CENTER" style="-fx-font-size: 30;" styleClass="labelColor" text="00" textFill="WHITE">
+                                                   <font>
+                                                      <Font size="25.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </HBox>
+                                          <Label fx:id="dateLocal" styleClass="labelColor" text="08 Feb 2018" textFill="WHITE">
                                              <font>
-                                                <Font size="25.0" />
-                                             </font>
-                                          </Label>
-                                          <Label fx:id="dateLocal1" styleClass="labelColor" text=":" textFill="WHITE">
-                                             <font>
-                                                <Font size="25.0" />
-                                             </font>
-                                          </Label>
-                                          <Label fx:id="lblMinutes" alignment="CENTER" styleClass="labelColor" text="00" textFill="WHITE">
-                                             <font>
-                                                <Font size="25.0" />
-                                             </font>
-                                          </Label>
-                                          <Label fx:id="dateLocal11" styleClass="labelColor" text=":" textFill="WHITE">
-                                             <font>
-                                                <Font size="25.0" />
-                                             </font>
-                                          </Label>
-                                          <Label fx:id="lblSeconds" alignment="CENTER" styleClass="labelColor" text="00" textFill="WHITE">
-                                             <font>
-                                                <Font size="25.0" />
+                                                <Font size="18.0" />
                                              </font>
                                           </Label>
                                        </children>
-                                    </HBox>
-                                    <Label fx:id="dateLocal" styleClass="labelColor" text="08 Feb 2018" textFill="WHITE">
-                                       <font>
-                                          <Font size="18.0" />
-                                       </font>
-                                    </Label>
+                                    </VBox>
+                                    <VBox>
+                                       <children>
+                                          <Button fx:id="btnLogout" mnemonicParsing="false" onAction="#btnLogoutOnAction" style="-fx-background-color: transparent;" styleClass="ivUserImage">
+                                             <graphic>
+                                                <ImageView fitHeight="30.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../images/lock.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                          </Button>
+                                          <Label fx:id="staffNameLbl" alignment="BOTTOM_LEFT" styleClass="labelColor" text="Kwabena Epic" textFill="WHITE">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                       <padding>
+                                          <Insets right="8.0" />
+                                       </padding>
+                                    </VBox>
                                  </children>
-                                 <HBox.margin>
-                                    <Insets right="50.0" />
-                                 </HBox.margin>
                               </HBox>
                               <Region />
-                                        <HBox alignment="CENTER_RIGHT">
-                                            <children>
-                                    <Button fx:id="btnLogout" mnemonicParsing="false" onAction="#btnLogoutOnAction" style="-fx-background-color: transparent;" styleClass="ivUserImage">
-                                       <graphic>
-                                          <ImageView fitHeight="27.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
-                                             <image>
-                                                <Image url="@../images/lock.png" />
-                                             </image>
-                                          </ImageView>
-                                       </graphic>
-                                    </Button>
-                                            </children>
-                                 <padding>
-                                    <Insets right="15.0" />
-                                 </padding>
-                                        </HBox>
                                     </children>
                                 </HBox>
                             </children>
+                     <BorderPane.margin>
+                        <Insets />
+                     </BorderPane.margin>
+                     <padding>
+                        <Insets left="8.0" />
+                     </padding>
                         </AnchorPane>
                     </top>
                 </BorderPane>
