@@ -5,7 +5,6 @@
 <?import com.jfoenix.controls.JFXPasswordField?>
 <?import com.jfoenix.controls.JFXSpinner?>
 <?import com.jfoenix.controls.JFXTextField?>
-<?import java.net.URL?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
@@ -20,7 +19,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SettingsController">
+<AnchorPane stylesheets="@../css/Modena" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SettingsController">
    <children>
       <BorderPane AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="0.0">
          <center>
@@ -35,10 +34,10 @@
                                     <VBox prefWidth="442.0" spacing="20.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="20.0">
                                        <children>
                                           <TextField fx:id="tfCompanyName" prefHeight="50.0" prefWidth="383.0" promptText="Company Name" />
-                                          <TextField fx:id="tfContactOne" prefHeight="50.0" />
-                                          <TextField fx:id="tfContactTwo" prefHeight="50.0" />
-                                          <TextField fx:id="tfLocation" prefHeight="50.0" />
-                                          <TextArea fx:id="taAddress" prefHeight="88.0" prefWidth="407.0" />
+                                          <TextField fx:id="tfContactOne" prefHeight="50.0" promptText="Contact Number " />
+                                          <TextField fx:id="tfContactTwo" prefHeight="50.0" promptText="Contact Number 2" />
+                                          <TextField fx:id="tfLocation" prefHeight="50.0" promptText="Business Location" />
+                                          <TextArea fx:id="taAddress" prefHeight="88.0" prefWidth="407.0" promptText="Business Address" />
                                           <PasswordField fx:id="pfPassword" prefHeight="50.0" />
                                           <HBox alignment="CENTER" spacing="25.0">
                                              <children>
@@ -134,7 +133,4 @@
          </top>
       </BorderPane>
    </children>
-      <stylesheets>
-        <URL value="@../css/Modena" />
-         </stylesheets>
 </AnchorPane>
