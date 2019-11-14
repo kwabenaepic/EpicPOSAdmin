@@ -87,41 +87,23 @@ public class EpicPOSAdmin extends Application {
         stage.initStyle(StageStyle.TRANSPARENT);
         stage.sizeToScene();
         stage.show();
+
         stage.setMaximized(true);
         return (Initializable) loader.getController();
     }
 
     public void gotoDashboard() {
         try {
-            DashboardController loginFrm = (DashboardController) dashboard("/view/Dashboard.fxml");
-            loginFrm.setApp(this);
+            DashboardController dashboardFrm = (DashboardController) dashboard("/view/Dashboard.fxml");
+            dashboardFrm.setApp(this);
         } catch (Exception ex) {
             Logger.getLogger(EpicPOSAdmin.class.getName()).log(Level.SEVERE, null, ex);
         }
-
-//      FXMLLoader fXMLLoader = new FXMLLoader();
-//      fXMLLoader.setLocation(getClass().getResource("/view/Dashboard.fxml"));
-//      // initializing the controller
-//      try {
-//          fXMLLoader.load();
-//          Parent parent = fXMLLoader.getRoot();
-//          Rectangle2D screenBounds = Screen.getPrimary().getVisualBounds();
-//          Scene scene = new Scene(parent, screenBounds.getWidth(), screenBounds.getHeight());
-//          scene.setFill(new Color(0, 0, 0, 0));
-//          Stage stage = new Stage();
-//          stage.setScene(scene);
-//          stage.initModality(Modality.APPLICATION_MODAL);
-////          stage.initStyle(StageStyle.TRANSPARENT);
-//          stage.show();
-//      } catch (IOException ex) {
-//          Logger.getLogger(EpicPOSAdmin.class.getName()).log(Level.SEVERE, null, ex);
-//      }
     }
 
     public void gotoLogin() {
         try {
             LoginController loginFrm = (LoginController) login("/view/Login.fxml");
-
             loginFrm.setApp(this);
         } catch (Exception ex) {
             Logger.getLogger(EpicPOSAdmin.class.getName()).log(Level.SEVERE, null, ex);
@@ -315,6 +297,3 @@ public class EpicPOSAdmin extends Application {
         return stage;
     }
 }
-
-
-//~ Formatted by Jindent --- http://www.jindent.com

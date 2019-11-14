@@ -49,7 +49,9 @@ import tables.ProductsInTransactionManager;
 public class BestOrWorstSalesController implements Initializable {
 
     private EpicPOSAdmin application;
+    @FXML
     private DatePicker dpDateFrom;
+    @FXML
     private DatePicker dpDateTo;
     @FXML
     private TableView<ProductsInTransaction> tblInventory;
@@ -69,17 +71,14 @@ public class BestOrWorstSalesController implements Initializable {
     @FXML
     private Button btnExportExcel;
     @FXML
-    private DatePicker dpDateFrom1;
+    private Button btnShowRange;
     @FXML
-    private DatePicker dpDateTo1;
+    private ComboBox<String> cbDateRange;
     @FXML
-    private Button btnShowRange1;
+    private TextField tfSearch;
     @FXML
-    private ComboBox<?> cbDateRange1;
-    @FXML
-    private TextField tfSearch1;
-    @FXML
-    private Button btnRefresh1;
+    private Button btnRefresh;
+    private ObservableList<String> dateRange;
 
     /**
      * Initializes the controller class.
@@ -87,6 +86,17 @@ public class BestOrWorstSalesController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
+        dateRange = FXCollections.observableArrayList();
+        dateRange.add("Today");
+        dateRange.add("Yesterday");
+        dateRange.add("This Week");
+        dateRange.add("Last Week");
+        dateRange.add("This Month");
+        dateRange.add("Last Month");
+        dateRange.add("All Sales");
+        cbDateRange.setItems(dateRange);
+        cbDateRange.setVisibleRowCount(5);
+
         configureSaleItemTable();
     }
 

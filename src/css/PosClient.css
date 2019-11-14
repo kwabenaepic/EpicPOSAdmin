@@ -113,6 +113,7 @@
     -fx-font-weight:700;
     -fx-border-radius: 10px 10px 0px 0px;
     -fx-background-radius: 10px 10px 0px 0px;
+
 }
 .combo-box .list-view .list-cell:filled {
     -fx-text-fill: black;

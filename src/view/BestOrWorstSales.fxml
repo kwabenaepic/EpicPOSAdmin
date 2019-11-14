@@ -46,18 +46,18 @@
                               <HBox alignment="CENTER_RIGHT" spacing="10.0">
                                  <children>
                                     <Label text="From:" />
-                                    <DatePicker fx:id="dpDateFrom1" prefWidth="110.0" styleClass="btnTender" />
+                                    <DatePicker fx:id="dpDateFrom" prefWidth="110.0" styleClass="btnTender" />
                                     <Label text="To:" />
-                                    <DatePicker fx:id="dpDateTo1" prefWidth="110.0" styleClass="btnTender" />
-                                    <Button fx:id="btnShowRange1" mnemonicParsing="false" onAction="#btnShowRnangeOnAction" styleClass="btnTender" text="Show Range" />
+                                    <DatePicker fx:id="dpDateTo" prefWidth="110.0" styleClass="btnTender" />
+                                    <Button fx:id="btnShowRange" mnemonicParsing="false" onAction="#btnShowRnangeOnAction" styleClass="btnTender" text="Show Range" />
                                  </children>
                                  <HBox.margin>
                                     <Insets right="20.0" />
                                  </HBox.margin>
                               </HBox>
-                              <ComboBox fx:id="cbDateRange1" onAction="#cbDateRangeOnAction" prefWidth="150.0" promptText="Today" styleClass="btnTender" />
-                              <TextField fx:id="tfSearch1" onKeyReleased="#tfSearchOnKeyReleased" prefHeight="33.0" promptText="Search Sales .." />
-                              <Button fx:id="btnRefresh1" mnemonicParsing="false" onAction="#btnRefreshOnAction" prefHeight="31.0" prefWidth="31.0" />
+                              <ComboBox fx:id="cbDateRange" onAction="#cbDateRangeOnAction" prefWidth="150.0" promptText="Today" styleClass="btnTender" />
+                              <TextField fx:id="tfSearch" onKeyReleased="#tfSearchOnKeyReleased" prefHeight="33.0" promptText="Search Sales .." />
+                              <Button fx:id="btnRefresh" mnemonicParsing="false" onAction="#btnRefreshOnAction" prefHeight="31.0" prefWidth="31.0" />
                            </children>
                         </HBox>
                      </children>
